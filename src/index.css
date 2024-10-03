@@ -21,3 +21,9 @@ code {
   font-family: "Knewave";
   src: url("./fonts/Knewave/Knewave-Regular.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: Just_Another_Hand;
+  src: url("./fonts/Just_Another_Hand/JustAnotherHand-Regular.ttf")
+    format("truetype");
+}

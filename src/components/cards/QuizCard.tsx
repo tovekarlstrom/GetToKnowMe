@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const QuizCard = () => {
   return (
     <>
-      <Card>
+      <Card to={"/quiz"}>
         <SVGWrapper>
           <svg
             width="329"
@@ -288,7 +289,7 @@ export const QuizCard = () => {
   );
 };
 
-const Card = styled.div`
+const Card = styled(Link)`
   width: 20rem;
   height: 14rem;
   position: relative;
