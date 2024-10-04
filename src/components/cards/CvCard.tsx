@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const CvCard = () => {
   return (
     <Container to={"/cv"}>
-      <h2 style={{ color: "#FFC25C", fontSize: "2em" }}>CV</h2>
+      <h2 style={{ color: "#EB4A2F", fontSize: "2em" }}>CV</h2>
     </Container>
   );
 };

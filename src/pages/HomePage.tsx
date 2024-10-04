@@ -1,15 +1,18 @@
 import { QuizCard } from "../components/cards/QuizCard";
 import { CvCard } from "../components/cards/CvCard";
 import styled from "styled-components";
+import { AboutCard } from "../components/cards/AboutCard";
 export const Homepage = () => {
   return (
     <Container>
-      <h1>Whill this help?</h1>
-      <p>Not sure, but lets test it out</p>
+      <img
+        style={{ width: "100%", maxWidth: "600px" }}
+        src="./t-logo.png"
+        alt="logo"
+      />
+      <Text>Frontend Developer</Text>
       <QuizCard />
-      <div style={{ width: "100%", position: "relative" }}>
-        <Divider />
-      </div>
+
       <CvContainer>
         <div>
           <p>Technical skills on a paper?</p>
@@ -17,6 +20,7 @@ export const Homepage = () => {
         </div>
         <CvCard />
       </CvContainer>
+      <AboutCard />
     </Container>
   );
 };
@@ -26,24 +30,30 @@ const Container = styled.div`
   position: relative;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  padding-top: 100px;
   align-items: center;
   font-family: "Knewave";
-  color: #f4ecd5;
-  margin-top: 10rem;
+  background-color: #f4ecd5;
 `;
 
-const Divider = styled.div`
+const Text = styled.p`
+  font-size: 1.4em;
+  color: #ff7bac;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 280px;
-  height: 60px;
-  background-color: rgba(235, 74, 47, 0.4);
+  transform: rotate(90deg);
+  top: 16%;
+  left: -80px;
+  @media (min-width: 768px) {
+    top: 18%;
+    font-size: 2.5em;
+    left: -150px;
+  }
 `;
+
 const CvContainer = styled.div`
   width: 100%;
-  background-color: #f4ecd5;
+  height: 700px;
+  background-color: #f9cc82;
   color: black;
   display: flex;
   flex-direction: column;
@@ -51,4 +61,11 @@ const CvContainer = styled.div`
   align-items: center;
   gap: 1rem;
   padding: 5rem 0;
+  text-decoration: none;
+  font-size: 1.2em;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 10rem;
+  }
 `;

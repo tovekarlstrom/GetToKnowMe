@@ -1,13 +1,10 @@
-interface Answer {
-  option: string;
-  correct: boolean;
-}
-interface Question {
+interface QuizQuestion {
   question: string;
   correctAnswerIndex: number;
-  answers: Answer[];
+  answers: { option: string }[];
 }
-export const quizQuestions: any = [
+
+export const quizQuestions: QuizQuestion[] = [
   {
     question: "who am I when it comes to movies?",
     correctAnswerIndex: 1,
